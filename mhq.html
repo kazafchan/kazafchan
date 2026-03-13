@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MHQ - Michigan Hand Questionnaire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="index.html">QuickDASH</a>
+        <a href="mhq.html" class="active">Michigan Hand Questionnaire</a>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Michigan Hand Questionnaire (MHQ)</h1>
+        </header>
+
+        <section class="domain-card">
+            <h2>Domain 1: Overall Hand Function</h2>
+            <div class="question-row">
+                <span class="question-text">1. How was your overall hand function during the past week?</span>
+                <div class="option-group">
+                    <label><input type="radio" name="mhq1" value="1"> 1 (Very Good)</label>
+                    <label><input type="radio" name="mhq1" value="2"> 2</label>
+                    <label><input type="radio" name="mhq1" value="3"> 3</label>
+                    <label><input type="radio" name="mhq1" value="4"> 4</label>
+                    <label><input type="radio" name="mhq1" value="5"> 5 (Very Poor)</label>
+                </div>
+            </div>
+            </section>
+
+        <section class="domain-card">
+            <h2>Domain 4: Pain</h2>
+            <div class="question-row">
+                <span class="question-text">2. How would you describe the pain in your hand/wrist?</span>
+                <div class="option-group">
+                    <label><input type="radio" name="mhq_pain1" value="1"> 1 (None)</label>
+                    <label><input type="radio" name="mhq_pain1" value="2"> 2</label>
+                    <label><input type="radio" name="mhq_pain1" value="3"> 3</label>
+                    <label><input type="radio" name="mhq_pain1" value="4"> 4</label>
+                    <label><input type="radio" name="mhq_pain1" value="5"> 5 (Severe)</label>
+                </div>
+            </div>
+        </section>
+
+        <div class="results-area">
+            <button onclick="calculateMHQ()">Calculate MHQ Scores</button>
+            <div class="mhq-results-grid">
+                <p>Function Score: <span id="score-function">--</span></p>
+                <p>Pain Score: <span id="score-pain">--</span></p>
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
