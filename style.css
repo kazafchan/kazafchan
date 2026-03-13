@@ -1,71 +1,52 @@
-/* General Page Styling */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f4f7f6;
+/* Question Styling */
+.question-row {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
 }
 
-header {
-    background: #2c3e50;
-    color: #ffffff;
-    padding: 1rem;
-    text-align: center;
-    border-radius: 8px;
-    margin-bottom: 20px;
+.question-row p {
+    font-weight: 500;
+    margin-bottom: 10px;
 }
 
-/* Section Styling (Protocols & Calculator) */
-section {
-    background: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+/* Hide the default radio circles */
+.option-group input[type="radio"] {
+    display: none;
 }
 
-h2 {
-    color: #2980b9;
-    border-bottom: 2px solid #ecf0f1;
-    padding-bottom: 10px;
-}
-
-/* Calculator Inputs */
-#questions {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+/* Style labels to look like buttons */
+.option-group {
+    display: flex;
     gap: 10px;
-    margin-bottom: 20px;
 }
 
-input[type="number"] {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-button {
-    background-color: #27ae60;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
+.option-group label {
+    flex: 1;
+    text-align: center;
+    padding: 12px;
+    border: 2px solid #2980b9;
+    border-radius: 6px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: all 0.2s ease;
+    background-color: white;
 }
 
-button:hover {
-    background-color: #219150;
+/* When the hidden radio is checked, change the label's look */
+.option-group input[type="radio"]:checked + label, 
+.option-group label:has(input:checked) {
+    background-color: #2980b9;
+    color: white;
 }
 
-/* Result Text */
-#result {
-    font-weight: bold;
+.results-area {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.score-display {
+    margin-top: 15px;
     font-size: 1.5rem;
-    color: #c0392b;
+    font-weight: bold;
+    color: #2c3e50;
 }
