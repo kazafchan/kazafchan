@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Therapy Tools</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Hand Therapy Protocols & Scoring</h1>
+    </header>
+
+    <main>
+        <section id="protocol">
+            <h2>Protocol: Flexor Tendon Repair</h2>
+            <p>Early active motion protocol (0-4 weeks): Dorsal blocking splint...</p>
+        </section>
+
+        <section id="calculator">
+            <h2>QuickDASH Calculator</h2>
+            <p>Enter scores (1-5) for the 11 items:</p>
+            <div id="questions">
+                <input type="number" class="dash-input" min="1" max="5" placeholder="Item 1">
+                <input type="number" class="dash-input" min="1" max="5" placeholder="Item 2">
+                </div>
+            <button onclick="calculateDash()">Calculate Score</button>
+            <p>Your Score: <span id="result">--</span></p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
